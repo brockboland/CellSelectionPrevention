@@ -30,8 +30,6 @@
                                                      green:arc4random_uniform(256)/255.f
                                                       blue:arc4random_uniform(256)/255.f
                                                      alpha:1];
-
-  cell.selectedBackgroundView.backgroundColor = [UIColor redColor];
   return cell;
 }
 
