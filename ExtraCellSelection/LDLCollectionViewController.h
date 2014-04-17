@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet LDLTableView *tableView;
 
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet UISwitch *shouldHighlightSwitch;
 
 @end

@@ -19,9 +19,8 @@
 		4679945E18FF793E00C4487F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4679943D18FF793E00C4487F /* Foundation.framework */; };
 		4679945F18FF793E00C4487F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4679944118FF793E00C4487F /* UIKit.framework */; };
 		4679947418FF79A300C4487F /* LDLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679947318FF79A300C4487F /* LDLCollectionViewController.m */; };
-		4679947718FF7A2B00C4487F /* LDLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679947618FF7A2B00C4487F /* LDLTableView.m */; };
-		4679947A18FF7A9700C4487F /* LDLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679947918FF7A9700C4487F /* LDLTableViewCell.m */; };
 		4679947D18FF7C7900C4487F /* LDLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679947C18FF7C7900C4487F /* LDLCollectionViewCell.m */; };
+		46A8060219001F8F00CD2D6F /* LDLCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A8060119001F8F00CD2D6F /* LDLCollectionHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +50,10 @@
 		4679945C18FF793E00C4487F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4679947218FF79A300C4487F /* LDLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLCollectionViewController.h; sourceTree = "<group>"; };
 		4679947318FF79A300C4487F /* LDLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLCollectionViewController.m; sourceTree = "<group>"; };
-		4679947518FF7A2B00C4487F /* LDLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLTableView.h; sourceTree = "<group>"; };
-		4679947618FF7A2B00C4487F /* LDLTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLTableView.m; sourceTree = "<group>"; };
-		4679947818FF7A9700C4487F /* LDLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLTableViewCell.h; sourceTree = "<group>"; };
-		4679947918FF7A9700C4487F /* LDLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLTableViewCell.m; sourceTree = "<group>"; };
 		4679947B18FF7C7900C4487F /* LDLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLCollectionViewCell.h; sourceTree = "<group>"; };
 		4679947C18FF7C7900C4487F /* LDLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLCollectionViewCell.m; sourceTree = "<group>"; };
+		46A8060019001F8F00CD2D6F /* LDLCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDLCollectionHeaderView.h; sourceTree = "<group>"; };
+		46A8060119001F8F00CD2D6F /* LDLCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDLCollectionHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +117,10 @@
 				4679944F18FF793E00C4487F /* Main.storyboard */,
 				4679947218FF79A300C4487F /* LDLCollectionViewController.h */,
 				4679947318FF79A300C4487F /* LDLCollectionViewController.m */,
+				46A8060019001F8F00CD2D6F /* LDLCollectionHeaderView.h */,
+				46A8060119001F8F00CD2D6F /* LDLCollectionHeaderView.m */,
 				4679947B18FF7C7900C4487F /* LDLCollectionViewCell.h */,
 				4679947C18FF7C7900C4487F /* LDLCollectionViewCell.m */,
-				4679947518FF7A2B00C4487F /* LDLTableView.h */,
-				4679947618FF7A2B00C4487F /* LDLTableView.m */,
-				4679947818FF7A9700C4487F /* LDLTableViewCell.h */,
-				4679947918FF7A9700C4487F /* LDLTableViewCell.m */,
 				4679945518FF793E00C4487F /* Images.xcassets */,
 				4679944418FF793E00C4487F /* Supporting Files */,
 			);
@@ -240,11 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4679947718FF7A2B00C4487F /* LDLTableView.m in Sources */,
 				4679944A18FF793E00C4487F /* main.m in Sources */,
 				4679947418FF79A300C4487F /* LDLCollectionViewController.m in Sources */,
 				4679944E18FF793E00C4487F /* LDLAppDelegate.m in Sources */,
-				4679947A18FF7A9700C4487F /* LDLTableViewCell.m in Sources */,
+				46A8060219001F8F00CD2D6F /* LDLCollectionHeaderView.m in Sources */,
 				4679947D18FF7C7900C4487F /* LDLCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class LDLTableView;
-
 @interface LDLCollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet LDLTableView *tableView;
-
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet UILabel *cellIDLabel;
 
 @end

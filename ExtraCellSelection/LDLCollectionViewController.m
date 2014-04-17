@@ -7,8 +7,11 @@
 //
 
 #import "LDLCollectionViewController.h"
+#import "LDLCollectionHeaderView.h"
 
 @interface LDLCollectionViewController ()
+
+@property (weak, nonatomic) LDLCollectionHeaderView *headerView;
 
 @end
 
@@ -28,6 +31,7 @@
                                                       blue:arc4random_uniform(256)/255.f
                                                      alpha:1];
 
+  cell.selectedBackgroundView.backgroundColor = [UIColor redColor];
   return cell;
 }
 
@@ -40,14 +44,33 @@
 }
 
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-  NSLog(@"Checking if should highlight collection view cell: %@", indexPath);
-  // NOTE: Returning NO here actually prevents selection, not just highlighting.
-  return YES;
+  if (self.headerView.highlightToggleSwitch.isOn) {
+    NSLog(@"YES, the collection view should highlight");
+    return YES;
+  }
+  else {
+    NSLog(@"NO, the collection view should NOT highlight");
+    return NO;
+  }
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   // NOTE: This is called, as long as both shouldSelectItemAtIndexPath: AND shouldHighlightItemAtIndexPath: return YES. If either returns NO, the cell is not actually selected.
   NSLog(@"Did select collection view cell: %@", indexPath);
 }
+
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+  // Setup the header view with the toggle switch
+  UICollectionReusableView *reusableview = nil;
+  if (kind == UICollectionElementKindSectionHeader) {
+    LDLCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+    reusableview = headerView;
+    self.headerView = headerView;
+  }
+  return reusableview;
+}
+
 
 @end

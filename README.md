@@ -1,5 +1,7 @@
+Note that the filenames here don't match the project name. This is because I just copied [another bug demo](https://github.com/brockboland/ExtraCellSelection) to start with.
+
 ### Description
-Selecting a collection view cell will highlight table view cells in a table view that's inside the collection view cell.
+A collection view cell cannot be selected if the collection view delegate indicates that the cell should not be highlighted. These should be independent factors, as the collection view delegate also has a method to indicate that a cell should not be highlighted.
 
 ### To Use
 Open ExtraCellSelection.xcodeproj and run the app in the simulator. Three collection view cells are shown, each with a randomly-colored bar at the top, and a table view with six rows.
